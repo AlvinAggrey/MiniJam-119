@@ -72,4 +72,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 #
-*/Packages/packages-lock.json
+*GameJamGame/Packages/packages-lock.json
