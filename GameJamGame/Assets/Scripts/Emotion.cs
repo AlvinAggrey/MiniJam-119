@@ -45,7 +45,7 @@ public class Emotion : MonoBehaviour
 
         }
         //positive
-        else if (m_emotionValue._Value > positiveBand[1] && m_emotionValue._Value < positiveBand[0])
+        if (m_emotionValue._Value < positiveBand[1] && m_emotionValue._Value > positiveBand[0])
         {
             m_emotionState = EmotionState.Positive;
 
