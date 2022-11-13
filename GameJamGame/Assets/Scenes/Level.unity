@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43863437, g: 0.4867627, b: 0.5670323, a: 1}
+  m_IndirectSpecularColor: {r: 0.4386278, g: 0.4867534, b: 0.56702477, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,6 +315,46 @@ PrefabInstance:
     - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.012615997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[20]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[39]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[52]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[56]
+      value: 34.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[96]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[156]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[193]
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[194]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[245]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677072476437796951, guid: 1f5bb0d87d234c84dbbf98318f1e6cf6, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[260]
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
