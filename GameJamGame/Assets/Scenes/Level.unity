@@ -441,7 +441,7 @@ MeshCollider:
   m_GameObject: {fileID: 1370322318}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -606,7 +606,7 @@ Transform:
   m_GameObject: {fileID: 1463511500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.42, z: 0}
-  m_LocalScale: {x: 2.298319, y: 5.47, z: 1.3599522}
+  m_LocalScale: {x: 1.6899999, y: 4.0222, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1370322319}
@@ -645,9 +645,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b25323d40175b241954fd7efda6949e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_emotionState: 0
-  m_emotionValue:
-    m_value: 0
+  m_emotion: {fileID: 0}
+--- !u!1 &1735544879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7029948723529949830, guid: 2d366464cfba29f48a0a9d1f20f3d835, type: 3}
+  m_PrefabInstance: {fileID: 1996107458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1735544883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735544879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85016465, y: 0.8501645, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1996107458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -700,6 +716,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6248052225768460086, guid: 2d366464cfba29f48a0a9d1f20f3d835, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 359d4e932349ef64f8a05b5945e14d40, type: 2}
     - target: {fileID: -1853094968961178454, guid: 2d366464cfba29f48a0a9d1f20f3d835, type: 3}
       propertyPath: orthographic
       value: 1
@@ -712,6 +732,10 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1362379507773503560, guid: 2d366464cfba29f48a0a9d1f20f3d835, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 359d4e932349ef64f8a05b5945e14d40, type: 2}
     - target: {fileID: 919132149155446097, guid: 2d366464cfba29f48a0a9d1f20f3d835, type: 3}
       propertyPath: m_Name
       value: game_jam (1)
@@ -743,6 +767,10 @@ PrefabInstance:
     - target: {fileID: 1602564128540957456, guid: 2d366464cfba29f48a0a9d1f20f3d835, type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.012615997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602564128540957456, guid: 2d366464cfba29f48a0a9d1f20f3d835, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[21]
+      value: 45.5
       objectReference: {fileID: 0}
     - target: {fileID: 1602564128540957456, guid: 2d366464cfba29f48a0a9d1f20f3d835, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[309]
