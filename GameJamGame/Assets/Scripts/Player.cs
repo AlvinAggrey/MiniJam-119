@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Emotion m_mentality;
     public Emotion m_mobMentality;
     public List<Emotion> m_emotions;
+    public Spawner m_spawner;
 
     public Image m_image;
     public List<Sprite> m_Sprites;
@@ -96,14 +97,17 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        for(int i = 0; i < m_spawner.Mobs.Count; i++)
+        {
+            m_emotions.Add(m_spawner.Mobs[i].GetComponent<Emotion>());
+        }
     }
-
 
     // Update is called once per frame
     void Update()
     {
         CheckMentality();
+        m_mentality._EmotionValue._Value = CalcAverage();
         //lose Conditions
         if(CalcAverage()> 2)
         {

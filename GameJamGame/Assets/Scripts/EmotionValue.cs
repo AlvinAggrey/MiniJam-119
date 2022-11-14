@@ -9,9 +9,14 @@ public class EmotionValue
 {
     int m_min;
     int m_max;
-    [SerializeField] float m_value = 0;
+    [SerializeField] float m_value;
     public float _Value { get { return m_value; } set { m_value = value; CheckValue(); } }
 
+    public EmotionValue()
+    {
+        m_min = -2;
+        m_max = 2;
+    }
     public EmotionValue(int value)
     {
         m_min = -2;

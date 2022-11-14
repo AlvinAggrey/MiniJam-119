@@ -14,7 +14,7 @@ public class Influence : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<Emotion>() != null)
+        if (other.GetComponent<Emotion>() != null && m_radius != other)
         {
             other.GetComponent<Emotion>()._EmotionValue._Value += m_emotion._EmotionValue._Value/6000;
         }

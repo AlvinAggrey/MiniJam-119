@@ -15,7 +15,7 @@ public class Emotion : MonoBehaviour
     private void OnEnable()
     {
         m_emotionState = EmotionState.Neutral;
-        m_emotionValue = new EmotionValue(0);
+        m_emotionValue = new EmotionValue();
     }
 
     public EmotionState EmotionState { get { return m_emotionState; } }
