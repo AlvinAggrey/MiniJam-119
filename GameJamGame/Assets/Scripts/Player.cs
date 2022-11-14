@@ -55,6 +55,18 @@ public class Player : MonoBehaviour
             m_image.sprite = m_Sprites[2];
         }
     }
+
+    //-2 to 2 range
+    public EmotionState emotionBand(float num)
+    {
+        Emotion band = new Emotion();
+        band._EmotionValue._Value = num;
+        return band.EmotionState;
+    }
+    public EmotionState MobMentalState()
+    {
+        return emotionBand(CalcAverage());
+    }
     // Start is called before the first frame update
     void Start()
     {
