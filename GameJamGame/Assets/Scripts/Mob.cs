@@ -6,6 +6,7 @@ public class Mob : MonoBehaviour
 {
     public Emotion m_emotion;
     public Animator animator;
+    public MobMovement m_movement;
 
     public bool isWalking = false;
 
@@ -16,14 +17,22 @@ public class Mob : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_emotion = gameObject.AddComponent<Emotion>();
+        //m_emotion = gameObject.AddComponent<Emotion>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (m_movement.Standing)
+        {
+            isWalking = false;
+        }
+        else
+        {
+            isWalking = true;
+        }
 
-        animator.SetInteger(anim_emotionState, (int)m_emotion.EmotionState);
         animator.SetBool(anim_isWalking, isWalking);
+        animator.SetInteger(anim_emotionState, (int)m_emotion.EmotionState);
     }
 }

@@ -12,7 +12,7 @@ public class Emotion : MonoBehaviour
     float[] negativeBand = { -1, -2};
     float[] positiveBand = { 1, 2 };
 
-    void Awake()
+    private void OnEnable()
     {
         m_emotionState = EmotionState.Neutral;
         m_emotionValue = new EmotionValue(0);

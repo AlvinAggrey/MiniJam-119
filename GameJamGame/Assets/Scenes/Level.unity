@@ -901,6 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_emotion: {fileID: 0}
   animator: {fileID: 1463511509}
+  m_movement: {fileID: 1463511510}
   isWalking: 0
 --- !u!212 &1463511508
 SpriteRenderer:
@@ -988,10 +989,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_spriteRenderer: {fileID: 1463511508}
   m_destination: {fileID: 0}
-  m_isMoving: 1
+  m_isEnabled: 1
   m_agent: {fileID: 1463511511}
-  m_walkRadius: 12.76
+  m_walkRadius: 28.39
   m_targetPosition: {x: 0, y: 0, z: 0}
+  m_maxWalkTime: 1
+  m_actualWalkTime: 1
+  m_standingTime: 2
+  m_isIdle: 0
 --- !u!195 &1463511511
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1301,9 +1306,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 08a6c63c72b17004697bc9ce62d480c0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.705
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
