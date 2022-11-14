@@ -10,7 +10,7 @@ public class EmotionValue
     int m_min;
     int m_max;
     [SerializeField] float m_value;
-    public float _Value { get { return m_value; } }
+    public float _Value { get { return m_value; } set { m_value = value; CheckValue(); } }
 
     public EmotionValue(int value)
     {

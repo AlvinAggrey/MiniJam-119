@@ -19,6 +19,7 @@ public class Emotion : MonoBehaviour
     }
 
     public EmotionState EmotionState { get { return m_emotionState; } }
+    public EmotionValue _EmotionValue{ get { return m_emotionValue; }}
 
     public void Increase(float num)
     {
