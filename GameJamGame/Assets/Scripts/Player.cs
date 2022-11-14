@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
 
     bool m_isLose = false;
 
+    float[] negativeBand = { -1, -2 };
+    float[] positiveBand = { 1, 2 };
+
     public bool IsLose { get { return m_isLose; } }
     public bool MobMentaltiy { get { return m_mobMentality; } }
 
@@ -59,9 +62,32 @@ public class Player : MonoBehaviour
     //-2 to 2 range
     public EmotionState emotionBand(float num)
     {
-        Emotion band = new Emotion();
-        band._EmotionValue._Value = num;
-        return band.EmotionState;
+        EmotionState band = EmotionState.Neutral;
+        //negative
+        if (num <= negativeBand[1])
+        {
+            band = EmotionState.ExNegative;
+        }
+        else if (num > negativeBand[1] && num < negativeBand[0])
+        {
+            band = EmotionState.Negative;
+        }
+        //positive
+        if (num < positiveBand[1] && num > positiveBand[0])
+        {
+            band = EmotionState.Positive;
+
+        }
+        else if (num >= positiveBand[1])
+        {
+            band = EmotionState.EXPositive;
+        }
+        //neutral band
+        else if (num > negativeBand[0] && num < positiveBand[0])
+        {
+            band = EmotionState.Neutral;
+        }
+        return band;
     }
     public EmotionState MobMentalState()
     {

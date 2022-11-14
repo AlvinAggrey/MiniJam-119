@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject m_posEndScreen;
     [SerializeField] GameObject m_negEndScreen;
     [SerializeField] GameObject m_EndScreen;
-    DefaultInputActions.UIActions uiActions;
+    DefaultInputActions m_inputActions;
 
-    bool showPosEnd = false;
-    bool showNegEnd = false;
+    //bool showPosEnd = false;
+    //bool showNegEnd = false;
     bool showEndScreen = false;
 
 
@@ -23,9 +23,8 @@ public class GameManager : MonoBehaviour
         m_EndScreen.SetActive(false);
         m_posEndScreen.SetActive(false);
         m_negEndScreen.SetActive(false);
-
-        uiActions = new DefaultInputActions.UIActions();
-        uiActions.Enable();
+        m_inputActions = new DefaultInputActions();
+        m_inputActions.Enable();
     }
 
     // Update is called once per frame
@@ -40,7 +39,7 @@ public class GameManager : MonoBehaviour
             else if((int)m_player.MobMentalState() > 0)
             {
                 m_EndScreen.SetActive(true);
-                if(uiActions.Click.IsPressed())
+                if(m_inputActions.UI.Click.IsPressed())
                 {
                     showEndScreen = true;
                     m_negEndScreen.SetActive(false);
@@ -49,7 +48,7 @@ public class GameManager : MonoBehaviour
             else if((int)m_player.MobMentalState() < 0)
             {
                 m_EndScreen.SetActive(true);
-                if (uiActions.Click.IsPressed())
+                if (m_inputActions.UI.Click.IsPressed())
                 {
                     showEndScreen = true;
                     m_negEndScreen.SetActive(false);

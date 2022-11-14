@@ -22,7 +22,7 @@ public class MobMovement : MonoBehaviour
         m_randomDirection += transform.position;
         NavMeshHit hit;
         Vector3 targetPosition = new Vector3();
-        NavMesh.SamplePosition(m_randomDirection, out hit, 1, 1);
+        NavMesh.SamplePosition(m_randomDirection, out hit, m_walkRadius, -1);
         targetPosition = hit.position;
         targetPosition.y = 0;
         return targetPosition;
@@ -39,7 +39,7 @@ public class MobMovement : MonoBehaviour
     {
 
         m_isArrived = m_agent.SetDestination(m_targetPosition);
-        if (m_isArrived)
+        if (m_targetPosition == transform.position)
         {
             m_targetPosition = ChoosePosition(); 
         }
