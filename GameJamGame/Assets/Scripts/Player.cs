@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,12 +16,14 @@ public class Player : MonoBehaviour
     public Image m_image;
     public List<Sprite> m_Sprites;
 
-    bool m_isLose = false;
+    bool m_isDead = false;
+    
+    public event EventHandler OnDeath;
 
     float[] negativeBand = { -1, -2 };
     float[] positiveBand = { 1, 2 };
 
-    public bool IsLose { get { return m_isLose; } }
+    public bool IsLose { get { return m_isDead; } }
     public bool MobMentaltiy { get { return m_mobMentality; } }
 
     public void Heal(float num)
@@ -107,19 +110,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         CheckMentality();
-        m_mentality._EmotionValue._Value = CalcAverage();
-        //lose Conditions
-        if(CalcAverage()> 2)
+        //m_mentality._EmotionValue._Value = CalcAverage();
+
+        if (m_health <= 0)
         {
-            m_isLose = true;
-        }
-        else if (CalcAverage()< -2)
-        {
-            m_isLose = true;
-        }
-        else if (m_health <= 0)
-        {
-            m_isLose = true;
+            m_isDead = true;
+            OnDeath?.Invoke(this, EventArgs.Empty);
         }
 
     }
