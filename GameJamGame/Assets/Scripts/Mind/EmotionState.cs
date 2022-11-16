@@ -5,7 +5,7 @@ using UnityEngine;
 //from -2 to 2
 public enum EmotionState
 {
-    ExNegative = -2,
+    EXNegative = -2,
     Negative,
     Neutral,
     Positive,

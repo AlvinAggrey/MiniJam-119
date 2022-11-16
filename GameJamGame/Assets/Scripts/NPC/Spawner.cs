@@ -9,17 +9,32 @@ public class Spawner : MonoBehaviour
     [SerializeField] List<Transform> m_spawns;
 
     [SerializeField] GameObject m_prefab;
+    [SerializeField] float[] chances = {0.2f,0.2f,0.2f,0.2f,0.2f};
 
-    public List<GameObject> Mobs;
+    public List<GameObject> Mobs { get { return m_mobs; } }
 
     // Start is called before the first frame update
+    //[ContextMenu("Spawn Chances")]
+    [ContextMenuItem("Reset", "ResetBiography")]
+    [Multiline(8)]
+    [SerializeField]
+    string playerBiography = "";
+
+    void ResetBiography()
+    {
+        playerBiography = "";
+    }
+
     void Start()
     {
         int spawnNum = m_spawns.Count;
         int spawnIndex = 0;
+        GameObject instance = m_prefab;
         for (int i = 0; i < m_num; i++)
         {
-            m_mobs.Add(GameObject.Instantiate<GameObject>(m_prefab, m_spawns[spawnIndex]));
+            int emotionValue = Random.Range(-2, 2);
+            instance.GetComponent<Mind>()._EmotionValue._Value = emotionValue;
+            m_mobs.Add(GameObject.Instantiate<GameObject>(instance, m_spawns[spawnIndex]));
             spawnIndex++;
             if(spawnIndex >= spawnNum)
             {

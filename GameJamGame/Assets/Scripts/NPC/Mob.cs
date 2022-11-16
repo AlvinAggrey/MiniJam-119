@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    public Emotion m_emotion;
+    public Mind m_mind;
     public Animator animator;
     public MobMovement m_movement;
 
@@ -33,6 +33,6 @@ public class Mob : MonoBehaviour
         }
 
         animator.SetBool(anim_isWalking, isWalking);
-        animator.SetInteger(anim_emotionState, (int)m_emotion.EmotionState);
+        animator.SetInteger(anim_emotionState, (int)m_mind.EmotionState);
     }
 }

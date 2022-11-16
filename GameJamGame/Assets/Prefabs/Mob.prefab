@@ -16,10 +16,10 @@ GameObject:
   - component: {fileID: 286473699636237356}
   - component: {fileID: 286473699636237353}
   - component: {fileID: 286473699636237351}
-  - component: {fileID: 286473699636237349}
   - component: {fileID: 286473699636237352}
+  - component: {fileID: 4953977861259147559}
   m_Layer: 0
-  m_Name: Mob1
+  m_Name: Mob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b25323d40175b241954fd7efda6949e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_emotion: {fileID: 286473699636237351}
+  m_mind: {fileID: 286473699636237351}
   animator: {fileID: 286473699636237354}
   m_movement: {fileID: 286473699636237353}
   isWalking: 0
@@ -191,23 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3af4000cda15d45aa705eae038cdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_emotionState: 0
   m_emotionValue:
-    m_value: 0
---- !u!114 &286473699636237349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286473699636237363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a84c03019c6131c44a48de219d2ea866, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_radius: {fileID: 286473699636237350}
-  m_emotion: {fileID: 286473699636237351}
+    m_value: -1
 --- !u!195 &286473699636237352
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -230,3 +215,19 @@ NavMeshAgent:
   m_BaseOffset: 9.000001
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4953977861259147559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286473699636237363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a251122f209b1fa40964a776879fb46a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_influenceNum: 0
+  m_seconds: 3
+  m_data: {fileID: 11400000, guid: bc217e060045ecc4fb50fbff4bdd9f7d, type: 2}
+  m_mind: {fileID: 286473699636237351}

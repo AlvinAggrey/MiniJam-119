@@ -33,7 +33,7 @@ public class EmotionValue
         }
         else if (m_value < m_min)
         {
-            m_value = m_max;
+            m_value = m_min;
         }
     }
     public void Increase(float num)
