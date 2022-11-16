@@ -13,18 +13,6 @@ public class Spawner : MonoBehaviour
 
     public List<GameObject> Mobs { get { return m_mobs; } }
 
-    // Start is called before the first frame update
-    //[ContextMenu("Spawn Chances")]
-    [ContextMenuItem("Reset", "ResetBiography")]
-    [Multiline(8)]
-    [SerializeField]
-    string playerBiography = "";
-
-    void ResetBiography()
-    {
-        playerBiography = "";
-    }
-
     void Start()
     {
         int spawnNum = m_spawns.Count;

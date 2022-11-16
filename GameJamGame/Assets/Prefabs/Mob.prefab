@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_emotionValue:
-    m_value: -1
+    m_value: 0
 --- !u!195 &286473699636237352
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -230,4 +230,3 @@ MonoBehaviour:
   m_influenceNum: 0
   m_seconds: 3
   m_data: {fileID: 11400000, guid: bc217e060045ecc4fb50fbff4bdd9f7d, type: 2}
-  m_mind: {fileID: 286473699636237351}

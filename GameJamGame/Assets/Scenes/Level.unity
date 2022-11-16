@@ -238,13 +238,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 32f416307beb3994aaeb6567c5d7ef4d, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 144470446}
+        m_TargetAssemblyTypeName: SceneChangeButton, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -311,7 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 329160913}
   - component: {fileID: 329160914}
-  - component: {fileID: 329160916}
+  - component: {fileID: 329160915}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -356,7 +356,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ad33e178eec1eea48b4bc58ce33b2b54, type: 3}
   - {fileID: 21300000, guid: 347f272430be7624d9e0d237bb6262eb, type: 3}
   m_GameManager: {fileID: 1873615283}
---- !u!114 &329160916
+--- !u!114 &329160915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,9 +365,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 329160912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea890ba6801e09c41999be17c98c9bcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 97ffa7d0b7b21ef42b5d4f242d172606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseClick:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 451b36bf-4b8f-4669-9db7-4839d375b1ad
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 129c8eba-1017-458e-9c1c-6c625723a19b
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    m_Flags: 0
+  mousePosition:
+    m_Name: Mouse Position
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d86bb54c-3c8a-4009-89f6-9b4074dbbc84
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 7c9dfa80-c19e-4f6f-abdb-06917327762f
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Position
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &356238336
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +907,7 @@ GameObject:
   - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1248,9 +1282,6 @@ MonoBehaviour:
   - 0.2
   - 0.2
   - 0.2
-  playerBiography: 'hhhhhhhhhhhhhhhhhhh
-
-'
 --- !u!4 &1519608489
 Transform:
   m_ObjectHideFlags: 0
@@ -1675,7 +1706,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 08a6c63c72b17004697bc9ce62d480c0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.252
+  m_Volume: 0.137
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2049,6 +2080,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 733796896043333873, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1156254704045567691, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
@@ -2280,6 +2315,10 @@ PrefabInstance:
     - target: {fileID: 7822734410997860919, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822734410997860919, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 8220786155369152801, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
       propertyPath: m_StaticEditorFlags

@@ -5,7 +5,6 @@ using UnityEngine;
 public class MobInfluence : Influence
 {
     [SerializeField] MobInfluenceData m_data;
-    [SerializeField] Mind m_mind;
     
     void CheckMindState(EmotionState emotion)
     {

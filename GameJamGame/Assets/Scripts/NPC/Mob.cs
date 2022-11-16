@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    public Mind m_mind;
+    [SerializeField] Mind m_mind;
     public Animator animator;
     public MobMovement m_movement;
 
     public bool isWalking = false;
 
+    public Mind _Mind { get { return m_mind; } }
     //animator field names
     string anim_emotionState = "EmotionState";
     string anim_isWalking = "isWalking";
