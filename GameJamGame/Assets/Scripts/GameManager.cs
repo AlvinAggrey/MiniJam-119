@@ -43,13 +43,17 @@ public class GameManager : MonoBehaviour
 
     float CalcAverageMindState()
     {
-        float average = 0;
-        List<GameObject> mobs = m_spawner.Mobs;
-        for (int i = 0; i < mobs.Count; i++)
+        if (m_spawner.Mobs != null)
         {
-            average += mobs[i].GetComponent<Mind>()._EmotionValue._Value;
+            float average = 0;
+            List<GameObject> mobs = m_spawner.Mobs;
+            for (int i = 0; i < mobs.Count; i++)
+            {
+                average += mobs[i].GetComponent<Mind>()._EmotionValue._Value;
+            }
+            return average /= mobs.Count;
         }
-        return average /= mobs.Count;
+        return 0;
     }
     // Update is called once per frame
     void Update()

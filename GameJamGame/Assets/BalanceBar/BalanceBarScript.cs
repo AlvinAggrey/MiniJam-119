@@ -15,8 +15,20 @@ public class BalanceBarScript : MonoBehaviour
     }
     public void setFillAmount(float fillValue)
     {
-        barImageHeaven.fillAmount = fillValue;
-        barImageHell.fillAmount =  1 - fillValue;
+        if (fillValue < 0)
+            return;
+        try
+        {
+            barImageHeaven.fillAmount = fillValue;
+            barImageHell.fillAmount =  1 - fillValue;
+        }
+        catch
+        {
+            barImageHeaven.fillAmount = 1;
+            barImageHell.fillAmount =  1 - 1;
+
+        }
+
     }
 
     public void Update()

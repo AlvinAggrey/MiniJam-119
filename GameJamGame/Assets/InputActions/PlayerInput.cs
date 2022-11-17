@@ -13,7 +13,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] int MaxShots = 5;
     [SerializeField] float shotRegenCooldown = 2;
     float m_regenTimer = 2;
-
+    string compTag = "Mob";
 
     int Shots = 5;
     bool m_canShoot = true;
@@ -52,8 +52,8 @@ public class PlayerInput : MonoBehaviour
         RaycastHit hit;
 
         Physics.Raycast(ray, out hit);
-
-        if (hit.collider != null)
+        
+        if (hit.collider != null && hit.collider.CompareTag(compTag))
         {
             Mob hitMob = hit.collider.gameObject.GetComponent<Mob>();
             if (hitMob != null)

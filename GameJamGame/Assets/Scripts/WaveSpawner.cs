@@ -7,7 +7,7 @@ public class WaveSpawner : Spawner
     //in seconds
     [SerializeField] int numPerWave = 5;
     [SerializeField] float waveTimer = 20;
-    [SerializeField] GameObject m_prefab;
+    //[SerializeField] GameObject Mob;
     float countDown = 0;
     // Start is called before the first frame update
     void Start()

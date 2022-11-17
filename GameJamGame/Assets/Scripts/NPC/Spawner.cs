@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] List<Transform> m_spawns;
     int spawnNum;
 
-    [SerializeField] GameObject m_prefab;
+    [SerializeField] protected GameObject m_prefab;
     [SerializeField] float[] chances = {0.2f,0.2f,0.2f,0.2f,0.2f};
 
     public List<GameObject> Mobs { get { return m_mobs; } }

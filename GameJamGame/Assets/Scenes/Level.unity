@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 329160914}
   - component: {fileID: 329160915}
   - component: {fileID: 329160916}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1295,7 @@ GameObject:
   - component: {fileID: 917887135}
   - component: {fileID: 917887137}
   - component: {fileID: 917887136}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameJamDevilBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 971076480}
   - component: {fileID: 971076482}
   - component: {fileID: 971076481}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameJamAngelBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2211,7 +2211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1519608488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2270,22 +2270,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444aedad42ff91342976fecdbbfab453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_num: 0
+  m_num: 3
   m_mobs: []
   m_spawns:
   - {fileID: 944253576}
   - {fileID: 828222861}
   - {fileID: 85941453}
-  m_prefab: {fileID: 0}
+  m_prefab: {fileID: 286473699636237363, guid: 381118138274c55488feca2f02fb0173, type: 3}
   chances:
   - 0.2
   - 0.2
   - 0.2
   - 0.2
   - 0.2
-  numPerWave: 3
+  numPerWave: 5
   waveTimer: 15.66
-  m_prefab: {fileID: 286473699636237363, guid: 381118138274c55488feca2f02fb0173, type: 3}
 --- !u!1 &1563561087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,7 +2528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830672870}
   - component: {fileID: 1830672871}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LoseScreens
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3151,6 +3150,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 286473699636237350, guid: 381118138274c55488feca2f02fb0173, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 286473699636237353, guid: 381118138274c55488feca2f02fb0173, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3203,6 +3206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mob
       objectReference: {fileID: 0}
+    - target: {fileID: 286473699636237363, guid: 381118138274c55488feca2f02fb0173, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 381118138274c55488feca2f02fb0173, type: 3}
@@ -3214,6 +3221,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 157411054913722058, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 359d4e932349ef64f8a05b5945e14d40, type: 2}
     - target: {fileID: 470574563439410533, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
@@ -3224,7 +3235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 733796896043333873, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
       propertyPath: orthographic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1156254704045567691, guid: 651837b45ac689b49b8b42fd77170e8b, type: 3}
       propertyPath: m_NavMeshLayer

@@ -19,8 +19,8 @@ GameObject:
   - component: {fileID: 286473699636237352}
   - component: {fileID: 4953977861259147559}
   m_Layer: 0
-  m_Name: Mob
-  m_TagString: Untagged
+  m_Name: MobPrefab
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 18.000002
   m_BaseOffset: 9.000001
-  m_WalkableMask: 1
+  m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4953977861259147559
 MonoBehaviour:
