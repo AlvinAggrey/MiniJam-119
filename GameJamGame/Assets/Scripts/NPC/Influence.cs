@@ -11,6 +11,10 @@ public  class Influence : MonoBehaviour
     protected Mind m_mind;
 
     List<TriggerTimeLog> m_mindLog;
+    public float InfluenceNum { get { return m_influenceNum; } }
+    public Mind _Mind { get { return m_mind; } }
+
+
 
     // Start is called before the first frame update
     void Awake()
