@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public bool IsLose {get{return true;}}
     public Action<EmotionState> OnLose;
 
-    bool showEndScreen = false;
+    //bool showEndScreen = false;
 
     public Mind WorldMindState { get{return m_worldMindState;}}
 

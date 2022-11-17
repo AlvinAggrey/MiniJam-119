@@ -22,7 +22,7 @@ public class MobMovement : MonoBehaviour
     [SerializeField] float m_maxWalkTime = 1;
     [SerializeField] float m_actualWalkTime = 1;
     [SerializeField] float m_standingTime = 2;
-    [SerializeField] bool m_isIdle = false;
+    //[SerializeField] bool m_isIdle = false;
     bool m_standing = false;
 
     public bool Standing { get { return m_standing; } }

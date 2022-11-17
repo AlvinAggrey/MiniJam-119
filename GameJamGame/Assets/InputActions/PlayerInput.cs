@@ -62,8 +62,10 @@ public class PlayerInput : MonoBehaviour
                 audioSource.PlayDelayed(0.3f);
                 //audioSource.clip = null;
                 hitMob._Mind._EmotionValue._Value = 0;
+                m_shotCooldownTimer = shotCooldown;
                 m_canShoot = false;
                 Shots--;
+                Debug.DrawLine(ray.origin, hit.point, Color.green,5f);
             }
         }
         

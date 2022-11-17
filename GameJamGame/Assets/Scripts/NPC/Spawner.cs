@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
 
         for (int i = 0; i < num; i++)
         {
-            int emotionValue = rand.Next(0, 3);
+            int emotionValue = rand.Next(-2, 3);
             instance.GetComponent<Mind>()._EmotionValue._Value = emotionValue;
             m_mobs.Add(GameObject.Instantiate<GameObject>(instance, m_spawns[spawnIndex]));
             spawnIndex++;
